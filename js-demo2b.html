@@ -42,6 +42,34 @@
             $('#first-foot').append('<td></td>');
             $('#first-foot').append('<td></td>');
        });
+
+       $.getJSON('/data.json', function(jqdata) {
+                $('#table caption').append(jqdata.title);
+
+                $('#head th:first-child').append(jqdata.heading);
+                $('#head th:nth-child(2)').append(jqdata.head1);
+                $('#head th:nth-child(3)').append(jqdata.head2);
+                $('#head th:nth-child(4)').append(jqdata.head3);
+                $('#head th:last-child').append(jqdata.head4);
+
+                $('#first-body td:first-child').append(jqdata.subheadcal);
+                $('#first-body td:nth-child(2)').append(jqdata.cal1);
+                $('#first-body td:nth-child(3)').append(jqdata.cal2);
+                $('#first-body td:nth-child(4)').append(jqdata.cal3);
+                $('#first-body td:last-child').append(jqdata.cal4);
+
+                $('#second-body td:first-child').append(jqdata.subheadfat);
+                $('#second-body td:nth-child(2)').append(jqdata.fat1);
+                $('#second-body td:nth-child(3)').append(jqdata.fat2);
+                $('#second-body td:nth-child(4)').append(jqdata.fat3);
+                $('#second-body td:last-child').append(jqdata.fat4);
+
+                $('#first-foot td:first-child').append(jqdata.subheadven);
+                $('#first-foot td:nth-child(2)').append(jqdata.ven1);
+                $('#first-foot td:nth-child(3)').append(jqdata.ven2);
+                $('#first-foot td:nth-child(4)').append(jqdata.ven3);
+                $('#first-foot td:last-child').append(jqdata.ven4);
+            });
     });
 
  </script>
