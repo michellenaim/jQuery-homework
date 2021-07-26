@@ -41,9 +41,8 @@
             $('#first-foot').append('<td></td>');
             $('#first-foot').append('<td></td>');
             $('#first-foot').append('<td></td>');
-       });
 
-       $.getJSON('/data.json', function(jqdata) {
+            $.getJSON('/data.json', function(jqdata) {
                 $('#table caption').append(jqdata.title);
 
                 $('#head th:first-child').append(jqdata.heading);
@@ -70,6 +69,8 @@
                 $('#first-foot td:nth-child(4)').append(jqdata.ven3);
                 $('#first-foot td:last-child').append(jqdata.ven4);
             });
+       });
+
     });
 
  </script>
